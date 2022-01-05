@@ -1,0 +1,8 @@
+dataset_name: ShapeNet
+dataset_root: data/ShapeNet
+
+manifold_points: 3000
+non_manifold_points: 2048
+random_noise: 0.005
+
+iter_nbr: 600000

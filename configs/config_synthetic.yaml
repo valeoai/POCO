@@ -1,0 +1,12 @@
+dataset_name: SyntheticRooms
+dataset_root: data/synthetic_room_dataset
+
+manifold_points: 10000
+non_manifold_points: 2048
+random_noise: 0.005
+
+training_batch_size: 8
+iter_nbr: 600000
+
+val_interval: 5
+val_num_mesh: 20

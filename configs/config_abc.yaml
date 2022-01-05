@@ -1,0 +1,11 @@
+dataset_name: ABC
+dataset_root: data/3d_shapes_abc_training
+
+manifold_points: 3000
+non_manifold_points: 2000
+iter_nbr: 600000
+training_random_rotation_x: 180
+training_random_rotation_y: 180
+training_random_rotation_z: 180
+
+val_interval: 5

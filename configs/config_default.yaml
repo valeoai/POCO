@@ -1,0 +1,45 @@
+experiment_name: null
+dataset_name: null
+dataset_root: null
+save_dir: 'results'
+train_split: 'training'
+val_split: 'validation'
+test_split: 'test'
+filter_name: null
+
+manifold_points: 2048
+non_manifold_points: 2048
+random_noise: null # 0.1
+normals: False
+
+#training
+training_random_scale: null # 0.1
+training_random_rotation_x: null # 180
+training_random_rotation_y: null # 180
+training_random_rotation_z: null # 180
+training_batch_size: 16
+training_iter_nbr: 100000
+training_lr_start: 0.001
+
+resume: false
+
+network_backbone: FKAConv
+network_latent_size: 32
+network_decoder: InterpAttentionKHeadsNet
+network_decoder_k: 64
+network_n_labels: 2
+
+device: "cuda" 
+threads: 8
+log_mode: "no_log"
+logging: INFO
+
+val_num_mesh: null
+val_interval: 1
+
+
+
+
+
+
+
