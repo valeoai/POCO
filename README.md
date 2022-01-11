@@ -10,7 +10,14 @@ by: [Alexandre Boulch](https://www.boulch.eu) and [Renaud Marlet](http://imagine
 ---
 ## Citation
 
-**TODO**
+```
+@article{boulch2022poco,
+  title={POCO: Point Convolution for Surface Reconstruction},
+  author={Boulch, Alexandre and Marlet, Renaud},
+  journal={arXiv preprint arXiv:2201.01831},
+  year={2022}
+}
+```
 
 ---
 ## Dependencies
