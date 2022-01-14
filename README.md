@@ -10,7 +10,14 @@ by: [Alexandre Boulch](https://www.boulch.eu) and [Renaud Marlet](http://imagine
 ---
 ## Citation
 
-**TODO**
+```
+@article{boulch2022poco,
+  title={POCO: Point Convolution for Surface Reconstruction},
+  author={Boulch, Alexandre and Marlet, Renaud},
+  journal={arXiv preprint arXiv:2201.01831},
+  year={2022}
+}
+```
 
 ---
 ## Dependencies
@@ -59,7 +66,7 @@ You can use the script `datasets/scenenet_sample.py`. You will also need to modi
 
 ### Precomputed meshes and point clouds
 
-For easy use of the code, we provide precomputed [meshes](), and point clouds [SceneNet20](), [SceneNet100](), [SceneNet500]() and [SceneNet1000]().
+For easy use of the code, we provide precomputed [meshes](https://github.com/valeoai/POCO/releases/download/v0.0.0/watertight_processed_500000.zip), and point clouds [SceneNet20](https://github.com/valeoai/POCO/releases/download/v0.0.0/watertight_processed_500000_points_density20.zip), [SceneNet100](https://github.com/valeoai/POCO/releases/download/v0.0.0/watertight_processed_500000_points_density100.zip), [SceneNet500](https://github.com/valeoai/POCO/releases/download/v0.0.0/watertight_processed_500000_points_density500.zip) and [SceneNet1000](https://github.com/valeoai/POCO/releases/download/v0.0.0/watertight_processed_500000_points_density1000.zip).
 
 ### Location
 
@@ -163,15 +170,15 @@ You can adapt the paths to evaluate on the different datasets and noise variants
 
 We provide pre-trained models for FKAConv backbone.
 
-[ShapeNet 3k, noise, no normals]()
+[ShapeNet 3k, noise, no normals](https://github.com/valeoai/POCO/releases/download/v0.0.0/ShapeNet_3k.zip)
 
-[ShapeNet 3k, no noise, normals]()
+[ShapeNet 3k, no noise, normals](https://github.com/valeoai/POCO/releases/download/v0.0.0/ShapeNet_3k_normals.zip)
 
-[SyntheticRooms 10k]()
+[SyntheticRooms 10k](https://github.com/valeoai/POCO/releases/download/v0.0.0/SyntheticRooms_10k.zip)
 
-[ABC 3k]()
+[ABC 3k](https://github.com/valeoai/POCO/releases/download/v0.0.0/ABC_3k.zip)
 
-[ABC 10k]()
+[ABC 10k](https://github.com/valeoai/POCO/releases/download/v0.0.0/ABC_10k.zip)
 
 ---
 ## Configuration
