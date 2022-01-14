@@ -88,6 +88,10 @@ def main(config):
         train_transform.append(lcp_T.RandomNoiseNormal(sigma=config["random_noise"]))
         test_transform.append(lcp_T.RandomNoiseNormal(sigma=config["random_noise"]))
 
+    if config["normals"]:
+        logging.info("Normals as features")
+        test_transform.append(lcp_T.FieldAsFeatures(["normal"]))
+
     # operate the permutations
     train_transform = train_transform + [
                                             lcp_T.Permutation("pos", [1,0]),
@@ -186,9 +190,6 @@ def main(config):
 
             data = dict_to_device(data, device)
             optimizer.zero_grad()
-
-            if config["normals"]:
-                data["x"] = data["normal"]
 
             outputs = net(data, spectral_only=True)
             occupancies = data["occupancies"]
