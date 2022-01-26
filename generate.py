@@ -426,18 +426,19 @@ def main(config):
 
 
             # if too musch points and no subsample iteratively compute the latent vectors
-            if data["pos"].shape[2] > 100000 and (config["gen_subsample_manifold"] is None):
-                raise NotImplementedError
+            if data["pos"].shape[2] > 100000 and ("gen_subsample_manifold" not in config or config["gen_subsample_manifold"] is None):
+                
                 # create the KDTree
                 pos = data["pos"][0].cpu().transpose(0,1).numpy()
                 tree = KDTree(pos)
 
                 # create the latent storage
-                latent = torch.zeros((pos.shape[0], _config["network"]["latent_size"]), dtype=torch.float)
+                latent = torch.zeros((pos.shape[0], config["network_latent_size"]), dtype=torch.float)
                 counts = torch.zeros((pos.shape[0],), dtype=torch.float)
                 
-                logging.info(f"Latent computation - {_config['generation']['nviews']} views")
-                for current_value in range(0,_config["generation"]["nviews"]):
+                n_views = 3
+                logging.info(f"Latent computation - {n_views} views")
+                for current_value in range(0,n_views):
                     while counts.min() < current_value+1:
                         valid_ids = np.argwhere(counts.cpu().numpy()==current_value)
                         # print(valid_ids.shape)
@@ -447,12 +448,6 @@ def main(config):
                         distances, neighbors = tree.query(pt, k=k)
 
                         neighbors = neighbors[0]
-
-                        if _config["generation"]["downscale"] < 1:
-                            num_pts = int(neighbors.shape[0] * _config["generation"]["downscale"])
-                            ids = torch.randperm(neighbors.shape[0])[:num_pts]
-                            neighbors = neighbors[ids]
-
 
                         data_partial = {
                             "pos": data["pos"][0].transpose(1,0)[neighbors].transpose(1,0).unsqueeze(0),
