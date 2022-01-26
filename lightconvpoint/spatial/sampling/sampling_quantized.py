@@ -46,7 +46,7 @@ def sampling_quantized(pos, ratio=None, n_support=None, support_points=None, sup
                 data = Data(pos=pts)
                 data = Rz(Ry(Rx(data)))
 
-                c = voxel_grid(data.pos, torch.zeros(data.pos.shape[0]), vox)
+                c = voxel_grid(data.pos, batch=torch.zeros(data.pos.shape[0]), size=vox)
                 _, perm = consecutive_cluster(c)
 
                 if sampled_count + perm.shape[0] < support_point_number:
