@@ -1,0 +1,29 @@
+name: poco
+channels:
+  - pytorch
+  - pyg
+  - open3d-admin
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7.10
+  - pytorch::pytorch=1.8.1
+  - pytorch::torchvision=0.9.1
+  - pytorch::torchaudio=0.8.1
+  - cudatoolkit=11.1
+  - cython
+  - tqdm
+  - scikit-image
+  - open3d
+  - scikit-learn
+  - pyyaml
+  - addict
+  - pandas
+  - plyfile
+  - pyg=2.0.1
+  - pip
+  - pip:
+    - open3d
+    - trimesh
+    - tensorboard
