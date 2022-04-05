@@ -84,6 +84,9 @@ python train.py --config configs/config_shapenet.yaml
 # train on ShapeNet with 10k points, no noise and normals
 python train.py --config configs/config_shapenet.yaml --normals True --random_noise 0 --experiment_name Normals
 
+# train on SyntheticRooms
+python train.py --config configs/config_synthetic.yaml
+
 # train on ABC with 3k points
 python train.py --config configs/config_abc.yaml --experiment_name 3k
 
