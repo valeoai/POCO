@@ -23,6 +23,11 @@ by: [Alexandre Boulch](https://www.boulch.eu) and [Renaud Marlet](http://imagine
 ## Dependencies
 
 Our code rely on [Pytorch Geometric](https://pytorch-geometric.readthedocs.io/), which should be installed.
+You can create a conda environment with:
+```
+conda env create -f environment.yml
+```
+
 Then, run:
 ```
 python setup.py build_ext --inplace
