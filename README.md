@@ -30,6 +30,12 @@ Accepted at Computer Vision and Pattern Recognition, CVPR, 2022
 
 The code was used with Ubuntu, Python 3.7.10, Cuda 11.1 and Pytorch 1.8.1
 
+### Installing APT packages
+
+```
+apt-get install libgl1-mesa-glx libopenblas-dev
+```
+
 ### Creating a conda environement
 
 If you want to run the code in a conda environment, you can create one with Python 3.7.10 and CudaToolKit 11.1 using:
