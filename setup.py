@@ -23,17 +23,17 @@ numpy_include_dir = numpy.get_include()
 
 # Extensions
 # pykdtree (kd tree)
-pykdtree = Extension(
-    'eval.src.utils.libkdtree.pykdtree.kdtree',
-    sources=[
-        'eval/src/utils/libkdtree/pykdtree/kdtree.c',
-        'eval/src/utils/libkdtree/pykdtree/_kdtree_core.c'
-    ],
-    language='c',
-    extra_compile_args=['-std=c99', '-O3', '-fopenmp'],
-    extra_link_args=['-lgomp'],
-    include_dirs=[numpy_include_dir]
-)
+#pykdtree = Extension(
+#    'eval.src.utils.libkdtree.pykdtree.kdtree',
+#    sources=[
+#        'eval/src/utils/libkdtree/pykdtree/kdtree.c',
+#        'eval/src/utils/libkdtree/pykdtree/_kdtree_core.c'
+#    ],
+#    language='c',
+#    extra_compile_args=['-std=c99', '-O3', '-fopenmp'],
+#    extra_link_args=['-lgomp'],
+#    include_dirs=[numpy_include_dir]
+#)
 
 
 # triangle hash (efficient mesh intersection)
@@ -49,7 +49,7 @@ triangle_hash_module = Extension(
 
 # Gather all extension modules
 ext_modules = [
-    pykdtree,
+#    pykdtree,
     triangle_hash_module,
 ]
 

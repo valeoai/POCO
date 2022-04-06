@@ -3,6 +3,12 @@
 
 by: [Alexandre Boulch](https://www.boulch.eu) and [Renaud Marlet](http://imagine.enpc.fr/~marletr/)
 
+Accepted at Computer Vision and Pattern Recognition, CVPR, 2022
+
+
+![Picture](docs/teaser.png)
+
+
 ---
 ## Abstract
 > Implicit neural networks have been successfully used for surface reconstruction from point clouds. However, many of them face scalability issues as they encode the isosurface function of a whole object or scene into a single latent vector. To overcome this limitation, a few approaches infer latent vectors on a coarse regular 3D grid or on 3D patches, and interpolate them to answer occupancy queries. In doing so, they loose the direct connection with the input points sampled on the surface of objects, and they attach information uniformly in space rather than where it matters the most, i.e., near the surface. Besides, relying on fixed patch sizes may require discretization tuning. To address these issues, we propose to use point cloud convolutions and compute latent vectors at each input point. We then perform a learning-based interpolation on nearest neighbors using inferred weights. Experiments on both object and scene datasets show that our approach significantly outperforms other methods on most classical metrics, producing finer details and better reconstructing thinner volumes.
@@ -20,14 +26,35 @@ by: [Alexandre Boulch](https://www.boulch.eu) and [Renaud Marlet](http://imagine
 ```
 
 ---
-## Dependencies
+## Installation
 
-Our code rely on [Pytorch Geometric](https://pytorch-geometric.readthedocs.io/), which should be installed.
-Then, run:
+The code was used with Ubuntu, Python 3.7.10, Cuda 11.1 and Pytorch 1.8.1
+
+### Creating a conda environement
+
+If you want to run the code in a conda environment, you can create one with Python 3.7.10 and CudaToolKit 11.1 using:
+
+```
+conda env create -f environment.yml
+conda activate poco
+```
+
+### Installing dependencies
+
+We install the requirements with two different requirement files as pytorch-geometric requires torch to be compiled.
+
+```
+pip install -r requirements.txt
+pip install -r requirements_pyg.txt
+```
+
+### Building the triangle hash module (from ConvONet)
+
+This module is used for score computation
+
 ```
 python setup.py build_ext --inplace
 ```
-
 ---
 ## Data
 
@@ -183,7 +210,3 @@ We provide pre-trained models for FKAConv backbone.
 
 [ABC 10k](https://github.com/valeoai/POCO/releases/download/v0.0.0/ABC_10k.zip)
 
----
-## Configuration
-
-The code was used with Ubuntu, Python 3.7.10, Cuda 11.1 and Pytorch 1.8.1
