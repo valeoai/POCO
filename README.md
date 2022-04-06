@@ -34,16 +34,6 @@ The code was used with Ubuntu, Python 3.7.10, Cuda 11.1 and Pytorch 1.8.1
 
 If you want to run the code in a conda environment, you can create one with Python 3.7.10 and CudaToolKit 11.1 using:
 
-<<<<<<< HEAD
-=======
-Our code rely on [Pytorch Geometric](https://pytorch-geometric.readthedocs.io/), which should be installed.
-You can create a conda environment with:
-```
-conda env create -f environment.yml
-```
-
-Then, run:
->>>>>>> eb566288d0dda0ad89de89c41a2f5cc61d607c08
 ```
 conda env create -f environment.yml
 conda activate poco
