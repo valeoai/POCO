@@ -47,11 +47,8 @@ conda activate poco
 
 ### Installing dependencies
 
-We install the requirements with two different requirement files as pytorch-geometric requires torch to be compiled.
-
 ```
 pip install -r requirements.txt
-pip install -r requirements_pyg.txt
 ```
 
 ### Building the triangle hash module (from ConvONet)
