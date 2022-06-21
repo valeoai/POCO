@@ -3,7 +3,13 @@
 
 by: [Alexandre Boulch](https://www.boulch.eu) and [Renaud Marlet](http://imagine.enpc.fr/~marletr/)
 
-Accepted at Computer Vision and Pattern Recognition, CVPR, 2022
+Computer Vision and Pattern Recognition, CVPR, 2022
+
+[Paper](https://openaccess.thecvf.com/content/CVPR2022/html/Boulch_POCO_Point_Convolution_for_Surface_Reconstruction_CVPR_2022_paper.html)&nbsp;&nbsp;&nbsp;
+[PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Boulch_POCO_Point_Convolution_for_Surface_Reconstruction_CVPR_2022_paper.pdf)&nbsp;&nbsp;&nbsp;
+[Supp](https://openaccess.thecvf.com/content/CVPR2022/supplemental/Boulch_POCO_Point_Convolution_CVPR_2022_supplemental.pdf)&nbsp;&nbsp;&nbsp;
+[Arxiv](http://arxiv.org/abs/2201.01831)
+
 
 
 ![Picture](docs/teaser.png)
@@ -17,11 +23,13 @@ Accepted at Computer Vision and Pattern Recognition, CVPR, 2022
 ## Citation
 
 ```
-@article{boulch2022poco,
-  title={POCO: Point Convolution for Surface Reconstruction},
-  author={Boulch, Alexandre and Marlet, Renaud},
-  journal={arXiv preprint arXiv:2201.01831},
-  year={2022}
+@InProceedings{Boulch_2022_CVPR,
+    author    = {Boulch, Alexandre and Marlet, Renaud},
+    title     = {POCO: Point Convolution for Surface Reconstruction},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {6302-6314}
 }
 ```
 
