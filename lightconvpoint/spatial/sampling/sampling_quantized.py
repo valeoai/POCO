@@ -38,7 +38,7 @@ def sampling_quantized(pos, ratio=None, n_support=None, support_points=None, sup
         support_points_ids = []
         for i in range(pos.shape[0]):
             pts = pos[i].clone().transpose(0,1)
-            ids = torch.arange(pts.shape[0])
+            ids = torch.arange(pts.shape[0], device=pts.device)
             sampled_count = 0
             sampled = []
             vox = vox_size[i]
