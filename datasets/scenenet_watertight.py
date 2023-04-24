@@ -17,7 +17,7 @@ filenames =[
 "1Bathroom/69_labels.obj",
 "1Bedroom/3_labels.obj",
 "1Bedroom/77_labels.obj",
-"1Bedroom/bedroom27.obj"
+"1Bedroom/bedroom27.obj",
 "1Bedroom/bedroom_1.obj",
 "1Bedroom/bedroom_68.obj",
 "1Bedroom/bedroom_wenfagx.obj",
