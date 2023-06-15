@@ -64,6 +64,7 @@ pip install -r requirements.txt
 This module is used for score computation
 
 ```
+CC=gcc CXX=gcc python setup_c.py build_ext --inplace
 python setup.py build_ext --inplace
 ```
 ---
